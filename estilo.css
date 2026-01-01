@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/*tirando todas as formatações css que vem pré-estabelecidas*/
 * {
     margin: 0px;
     padding: 0px;
@@ -18,12 +19,12 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-
+/*formatação do conteúdo do main, altura do celular */
 main {
     position: relative;
     height: 100vh;
 }
-
+/*formatação da posição do celular, posição: centralizada*/
 section#telefone {
     position:absolute;
     top: 50%;
@@ -33,4 +34,44 @@ section#telefone {
     height: 627px;
     width: 311px;
     background: url('./imagens/frame-iphone.png') no-repeat;
+}
+/*formatação da tela do celular*/
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+    overflow-y: hidden;
+    
+}
+/*formatação dos icons, menu de acesso*/
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align:right;
+}
+
+/*configuração do menu de acesso, icons redes sociais*/
+section#redes-sociais img {
+    width: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #00000066;
+    box-sizing: border-box;
+}
+/*configuração da animação do hover, deslocamento, velocidade e sombra*/
+section#redes-sociais img:hover {
+    border: 2px solid #ffffffa6;
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 10px #00000066 ;
+    transition: transform 0.4s, border 1s;
+}
+
+:root {
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
